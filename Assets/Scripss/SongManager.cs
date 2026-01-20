@@ -1,0 +1,34 @@
+using System.Xml;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.TextCore.Text;
+
+public class SongManager : MonoBehaviour
+{
+  [SerializeField]
+  private Animator character;
+  [SerializeField]
+  private UnityEvent onSetsong;
+  [SerializeField]
+  private UnityEvent onSongCancel;
+  [SerializeField]
+  private CharacterData characterData;
+  private SongData currentSong;
+  public void SetSong(SongData song)
+    {
+        onSetsong?.Invoke();
+        currentSong=song;
+        PlaySong();
+    }
+    public void PlaySong()
+    {
+         SoundManager.instance.PlayMusic(currentSong.songName);
+         character.Play(currentSong.animationName,0,0f);
+    }
+    public void StopSong()
+    {
+        onSongCancel?.Invoke();
+        SoundManager.instance.StopMusic();
+        character.Play(characterData.idleAnimationName, 0,0f);
+    }
+}
