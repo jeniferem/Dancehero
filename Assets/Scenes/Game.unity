@@ -286,7 +286,6 @@ GameObject:
   - component: {fileID: 190737924}
   - component: {fileID: 190737923}
   - component: {fileID: 190737925}
-  - component: {fileID: 190737926}
   m_Layer: 5
   m_Name: NotesChecker
   m_TagString: Untagged
@@ -462,6 +461,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1636479830}
+        m_TargetAssemblyTypeName: SongManager, Assembly-CSharp
+        m_MethodName: FallNote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &190737924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,33 +556,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &190737926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190737917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11b222c8636c5c46ab75c1935da305e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NotesLimit
-  onNotesLimitReached:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1238738103}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: AddNoteCount
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &321948087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1810,6 +1794,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1238738103}
         m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
         m_MethodName: AddNoteCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1636479830}
+        m_TargetAssemblyTypeName: SongManager, Assembly-CSharp
+        m_MethodName: FallNote
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3457,7 +3453,19 @@ MonoBehaviour:
         m_CallState: 2
   onHideScreen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1558442898}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hide
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1636479828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3564,6 +3572,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 3
           m_StringArgument: ShowLanes
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 934462542}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: Ready
           m_BoolArgument: 0
         m_CallState: 2
   onSongCancel:

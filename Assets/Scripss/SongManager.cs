@@ -1,7 +1,9 @@
 using System.Xml;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 using UnityEngine.TextCore.Text;
+using System.Runtime.CompilerServices;
 
 public class SongManager : MonoBehaviour
 {
@@ -36,5 +38,16 @@ public class SongManager : MonoBehaviour
         onSongCancel?.Invoke();
         SoundManager.instance.StopMusic();
         character.Play(characterData.idleAnimationName, 0,0f);
+    }
+    public void FallNote()
+    {
+        StartCoroutine(PlayFallAnimation());
+    }
+    private IEnumerator PlayFallAnimation()
+    {
+        SoundManager.instance.Play(characterData.failSoundName);
+        character.Play(characterData.failAnimationName, 0, 0f);
+        yield return new WaitForSeconds(character.GetCurrentAnimatorStateInfo(0).length);
+        character.Play(currentSong.animationName,0,0f);
     }
 }
