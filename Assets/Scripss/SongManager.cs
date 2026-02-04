@@ -41,6 +41,7 @@ public class SongManager : MonoBehaviour
     }
     public void FallNote()
     {
+        StopAllCoroutines();
         StartCoroutine(PlayFallAnimation());
     }
     private IEnumerator PlayFallAnimation()
