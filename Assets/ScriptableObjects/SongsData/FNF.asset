@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongData1
   songName: FNF
   animationName: Hip Hop Dancing
-  notesConfig: {fileID: 4900000, guid: df8bc3ea36c67b945ad875fc24273d5a, type: 3}
+  notesConfig: {fileID: 4900000, guid: d44f70bfad19e834ea61cc93ebdae4fe, type: 3}
   speed: 400

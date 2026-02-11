@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongData1
   songName: La Chona
   animationName: salsa
-  notesConfig: {fileID: 4900000, guid: df8bc3ea36c67b945ad875fc24273d5a, type: 3}
+  notesConfig: {fileID: 4900000, guid: a10f6c1072759f44594bfe50ec43e60a, type: 3}
   speed: 400
